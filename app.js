@@ -11,9 +11,15 @@ var request = require('request');
 
 
 http.createServer(function (req, res) {
+
     var q = url.parse(req.url, true);
-    var filename = "." + q.pathname;
+    var name = (q.pathname).substring(1);
+    var filename = name+'.html';
     console.log(filename);
+
+    request('http://www.'+name).pipe(fs.createWriteStream(filename));
+
+
     fs.readFile(filename, function(err, data) {
         if (err) {
             res.writeHead(404, {'Content-Type': 'text/html'});
@@ -23,9 +29,11 @@ http.createServer(function (req, res) {
         res.write(data);
         return res.end();
     });
+
 }).listen(8080);
 
 
-request('http://www.naver.com').pipe(fs.createWriteStream('naver.com'));
-request('http://www.daum.net').pipe(fs.createWriteStream('daum.net'));
+
+
+
 
