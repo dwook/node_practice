@@ -1,0 +1,26 @@
+{
+  "name": "node_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "require": "^2.4.20"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "require": "^2.4.20"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwook/node_practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwook/node_practice/issues"
+  },
+  "homepage": "https://github.com/dwook/node_practice#readme"
+}
